@@ -1,0 +1,26 @@
+seed: 42
+n_splits: 5
+text_col: body
+rule_col: rule
+subreddit_col: subreddit
+target_col: rule_violation
+paths:
+  train_csv: ./data/train.csv
+  test_csv: ./data/test.csv
+  processed_train_csv: ./outputs/processed_train.csv
+  processed_test_csv: ./outputs/processed_test.csv
+  rules_json: ./artifacts/rules.json
+  subreddits_json: ./artifacts/subreddits.json
+  exemplars_json: ./artifacts/rule_exemplars.json
+  exemplars_index: ./artifacts/rule_exemplars.index
+  nli_scores_train: ./outputs/nli_scores_train.csv
+  nli_scores_test: ./outputs/nli_scores_test.csv
+exemplars:
+  min_chars: 10
+  max_chars: 600
+  drop_duplicates: true
+normalization:
+  enable: true
+  leetspeak: true
+  dotted_letters: true
+  zero_width_strip: true

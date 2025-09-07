@@ -5,16 +5,20 @@ rule_col: rule
 subreddit_col: subreddit
 target_col: rule_violation
 paths:
-  train_csv: ./data/train.csv
-  test_csv: ./data/test.csv
-  processed_train_csv: ./outputs/processed_train.csv
-  processed_test_csv: ./outputs/processed_test.csv
-  rules_json: ./artifacts/rules.json
-  subreddits_json: ./artifacts/subreddits.json
-  exemplars_json: ./artifacts/rule_exemplars.json
-  exemplars_index: ./artifacts/rule_exemplars.index
-  nli_scores_train: ./outputs/nli_scores_train.csv
-  nli_scores_test: ./outputs/nli_scores_test.csv
+  train_csv: /content/Reddit_Classification/data/train.csv
+  test_csv: /content/Reddit_Classification/data/test.csv
+  processed_train_csv: /content/Reddit_Classification/outputs/processed_train.csv
+  processed_test_csv: /content/Reddit_Classification/outputs/processed_test.csv
+  rules_json: /content/Reddit_Classification/artifacts/rules.json
+  subreddits_json: /content/Reddit_Classification/artifacts/subreddits.json
+  exemplars_json: /content/Reddit_Classification/artifacts/rule_exemplars.json
+  exemplars_index: /content/Reddit_Classification/artifacts/rule_exemplars.index
+  nli_scores_train: /content/Reddit_Classification/outputs/nli_scores_train.csv
+  nli_scores_test: /content/Reddit_Classification/outputs/nli_scores_test.csv
+  baseline_report: /content/Reddit_Classification/outputs/w1_baseline_report.json
+  thresholds_json: /content/Reddit_Classification/outputs/w1_thresholds.json
+  oof_csv: /content/Reddit_Classification/outputs/w1_oof.csv
+  pred_csv: /content/Reddit_Classification/outputs/w1_pred.csv
 exemplars:
   min_chars: 10
   max_chars: 600

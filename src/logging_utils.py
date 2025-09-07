@@ -1,11 +1,10 @@
 import os, sys, logging
 from transformers.utils import logging as hf_logging
-def configure_logger(log_dir: str):
+def configure_logger(log_dir: str, name: str = "jigsaw_w1"):
     os.makedirs(log_dir, exist_ok=True)
     log_path = os.path.join(log_dir, "run.log")
-    logger = logging.getLogger("jigsaw_w0")
-    logger.setLevel(logging.DEBUG)
-    logger.handlers.clear()
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG); logger.handlers.clear()
     fh = logging.FileHandler(log_path, encoding="utf-8"); fh.setLevel(logging.DEBUG)
     ch = logging.StreamHandler(sys.stdout); ch.setLevel(logging.INFO)
     fmt = logging.Formatter("[%(asctime)s][%(levelname)s] %(message)s")

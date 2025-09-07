@@ -60,6 +60,6 @@ def main():
     with open(paths["exemplars_json"], "w", encoding="utf-8") as f:
         json.dump(exemplars, f, ensure_ascii=False, indent=2)
     out_cols = (["row_id"] if "row_id" in df.columns else []) + [text_col,"body_norm",rule_col,"rule_id",subreddit_col,"subreddit_id",target_col]
-    df[out_cols].to_csv(paths["processed_train_csv"], index=False)
+    df[out_cols].to_csv(paths["processed_train_csv"], index=False,encoding="utf-8-sig")
     logger.info("Preprocess done.")
 if __name__ == "__main__": main()

@@ -1,0 +1,10 @@
+{
+  "rule2id": {
+    "No Advertising: Spam, referral links, unsolicited advertising, and promotional content are not allowed.": 0,
+    "No legal advice: Do not offer or request legal advice.": 1
+  },
+  "id2rule": {
+    "0": "No Advertising: Spam, referral links, unsolicited advertising, and promotional content are not allowed.",
+    "1": "No legal advice: Do not offer or request legal advice."
+  }
+}
